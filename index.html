@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Finistère (Demos) - Playlist&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #f9f9f9;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.player {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 20px auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.progress {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #ddd;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.progress-bar {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #4285f4;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 0%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#playlist {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>list-style: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 20px auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#playlist li {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #eee;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 5px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#playlist li.active {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #4285f4;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Zarah Müller &amp; Maël Péneau - Finistère (Demos)&lt;/h1&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="player"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Audio element for playback --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;audio id="audio"&gt;&lt;/audio&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button id="playPause"&gt;Play&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button id="stop"&gt;Stop&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="progress"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="progress-bar" id="progressBar"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;ul id="playlist"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li data-src="https://drive.google.com/uc?export=download&amp;id=1XzINUNgmrC-bMVrD0P2M2cv0lSyDo2Er</p>
+<p class="p1">"&gt;spartacus love theme&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li data-src="https://drive.google.com/uc?export=download&amp;id=1WAP6znvjTMJn0_X9PZn_gA7kgdZlWo5D</p>
+<p class="p1">"&gt;PF15&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li data-src="https://drive.google.com/uc?export=download&amp;id=1W8CtI-jWuUbeBnB0HCd4-piuSzGzOPBf</p>
+<p class="p1">"&gt;dimanche incertitude étoilée&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li data-src="https://drive.google.com/uc?export=download&amp;id=1GdeeUDngwOdw0kXkFS-kIhB3GgqRGNl2</p>
+<p class="p1">"&gt;fuafua&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li data-src="https://drive.google.com/uc?export=download&amp;id=1KTo-W9EqWCjCaBYAEvv7B4hjBSm1TMKM</p>
+<p class="p1">"&gt;the body clock&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li data-src="https://drive.google.com/uc?export=download&amp;id=1YCdB6PRoxPNnty3uk3FJ2dgQXScMDhNH</p>
+<p class="p1">"&gt;quidam&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;li data-src="https://drive.google.com/uc?export=download&amp;id=1VUn-LLELM9zTkn0U7_rgjBAZZ1zA9gDj</p>
+<p class="p1">"&gt;open close&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/ul&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Contact: &lt;a href="mailto:maelstrom1900@gmail.com"&gt;contact&lt;/a&gt;&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const audio = document.getElementById('audio');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const playPause = document.getElementById('playPause');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const stop = document.getElementById('stop');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const progressBar = document.getElementById('progressBar');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const playlist = document.getElementById('playlist');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const tracks = playlist.getElementsByTagName('li');</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Initialize the first track if available</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let currentTrackIndex = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (tracks.length &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTrack(currentTrackIndex);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Function to set a track by index</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function setTrack(index) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Remove active class from all tracks</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Array.from(tracks).forEach(track =&gt; track.classList.remove('active'));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const selectedTrack = tracks[index];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>selectedTrack.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>audio.src = selectedTrack.getAttribute('data-src');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>audio.load();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Play or pause the audio</p>
+<p class="p1"><span class="Apple-converted-space">    </span>playPause.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (audio.paused) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>audio.play();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>playPause.textContent = 'Pause';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>audio.pause();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>playPause.textContent = 'Play';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Stop the audio and reset progress</p>
+<p class="p1"><span class="Apple-converted-space">    </span>stop.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>audio.pause();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>audio.currentTime = 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>playPause.textContent = 'Play';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Update the progress bar as the audio plays</p>
+<p class="p1"><span class="Apple-converted-space">    </span>audio.addEventListener('timeupdate', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (audio.duration) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const percentage = (audio.currentTime / audio.duration) * 100;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>progressBar.style.width = percentage + '%';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Add click event to each track in the playlist</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Array.from(tracks).forEach((track, index) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>track.addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>currentTrackIndex = index;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setTrack(currentTrackIndex);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>audio.play();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>playPause.textContent = 'Pause';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Auto-play the next track when the current one ends</p>
+<p class="p1"><span class="Apple-converted-space">    </span>audio.addEventListener('ended', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>currentTrackIndex = (currentTrackIndex + 1) % tracks.length;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTrack(currentTrackIndex);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>audio.play();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
