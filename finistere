@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Finistère (Demos) - Playlist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .player {
+      margin: 20px auto;
+      width: 300px;
+    }
+    .progress {
+      width: 100%;
+      height: 10px;
+      background-color: #ddd;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    .progress-bar {
+      height: 100%;
+      background-color: #4285f4;
+      width: 0%;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #playlist {
+      list-style: none;
+      padding: 0;
+      max-width: 300px;
+      margin: 20px auto;
+    }
+    #playlist li {
+      padding: 10px;
+      background-color: #eee;
+      margin: 5px 0;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #playlist li.active {
+      background-color: #4285f4;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Zarah Müller & Maël Péneau - Finistère (Demos)</h1>
+  
+  <div class="player">
+    <!-- Audio element for playback -->
+    <audio id="audio"></audio>
+    <div>
+      <button id="playPause">Play</button>
+      <button id="stop">Stop</button>
+    </div>
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+  </div>
+  
+  <ul id="playlist">
+    <li data-src="track1.mp3">Track 1: Intro</li>
+    <li data-src="track2.mp3">Track 2: Verse</li>
+    <li data-src="track3.mp3">Track 3: Chorus</li>
+    <li data-src="track4.mp3">Track 4: Bridge</li>
+    <li data-src="track5.mp3">Track 5: Solo</li>
+    <li data-src="track6.mp3">Track 6: Outro</li>
+    <li data-src="track7.mp3">Track 7: Reprise</li>
+    <li data-src="track8.mp3">Track 8: Instrumental</li>
+    <li data-src="track9.mp3">Track 9: Acoustic</li>
+    <li data-src="track10.mp3">Track 10: Finale</li>
+  </ul>
+  
+  <p>Contact: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+  
+  <script>
+    const audio = document.getElementById('audio');
+    const playPause = document.getElementById('playPause');
+    const stop = document.getElementById('stop');
+    const progressBar = document.getElementById('progressBar');
+    const playlist = document.getElementById('playlist');
+    const tracks = playlist.getElementsByTagName('li');
+    
+    // Initialize the first track if available
+    let currentTrackIndex = 0;
+    if (tracks.length > 0) {
+      setTrack(currentTrackIndex);
+    }
+    
+    // Function to set a track by index
+    function setTrack(index) {
+      // Remove active class from all tracks
+      Array.from(tracks).forEach(track => track.classList.remove('active'));
+      const selectedTrack = tracks[index];
+      selectedTrack.classList.add('active');
+      audio.src = selectedTrack.getAttribute('data-src');
+      audio.load();
+    }
+    
+    // Play or pause the audio
+    playPause.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playPause.textContent = 'Pause';
+      } else {
+        audio.pause();
+        playPause.textContent = 'Play';
+      }
+    });
+    
+    // Stop the audio and reset progress
+    stop.addEventListener('click', () => {
+      audio.pause();
+      audio.currentTime = 0;
+      playPause.textContent = 'Play';
+    });
+    
+    // Update the progress bar as the audio plays
+    audio.addEventListener('timeupdate', () => {
+      if (audio.duration) {
+        const percentage = (audio.currentTime / audio.duration) * 100;
+        progressBar.style.width = percentage + '%';
+      }
+    });
+    
+    // Add click event to each track in the playlist
+    Array.from(tracks).forEach((track, index) => {
+      track.addEventListener('click', () => {
+        currentTrackIndex = index;
+        setTrack(currentTrackIndex);
+        audio.play();
+        playPause.textContent = 'Pause';
+      });
+    });
+    
+    // Auto-play the next track when the current one ends
+    audio.addEventListener('ended', () => {
+      currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+      setTrack(currentTrackIndex);
+      audio.play();
+    });
+  </script>
+</body>
+</html>
